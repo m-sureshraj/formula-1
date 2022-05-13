@@ -1,0 +1,29 @@
+@import 'styles/colors';
+
+@keyframes loadingPlaceholder {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+.placeholder {
+  $light-color: rgba(color(grey, light-grey), 0.35);
+  $default-color: rgba(color(grey, grey), 0.2);
+
+  animation-duration: 2.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: loadingPlaceholder;
+  animation-timing-function: linear;
+  background: $light-color;
+  background: linear-gradient(
+    to right,
+    $light-color 5%,
+    $default-color 40%,
+    $light-color 60%
+  );
+  background-size: 400px;
+}

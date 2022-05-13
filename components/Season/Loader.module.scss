@@ -1,0 +1,32 @@
+@import 'styles/colors';
+
+.rowWrapper {
+  padding-top: 40px;
+}
+
+.row {
+  height: 101px;
+  border: 1px solid color(brown, base);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  display: flex;
+}
+
+.details {
+  margin-left: 20px;
+  flex: auto;
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+}
+
+.date {
+  margin-left: auto;
+}
+
+.winner {
+  margin-top: 16px;
+}

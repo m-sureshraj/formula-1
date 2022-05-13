@@ -1,0 +1,19 @@
+@import 'styles/colors';
+@import 'styles/variables';
+
+.header {
+  background-color: color(primary, base);
+  height: $headerHeight;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.container {
+  width: $containerWidth;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

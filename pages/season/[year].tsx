@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-import { Season } from '../../components/season';
+import { Season } from '../../components/Season';
 
 const Page = () => {
   const {

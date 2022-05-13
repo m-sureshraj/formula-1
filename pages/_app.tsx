@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
+import { Layout } from '../components/ui/Layout';
+
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
     () =>
@@ -18,10 +20,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Component {...pageProps} />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <Layout>
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+        {/* Note: following dev tool will be excluded from the production build by react-query */}
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </Layout>
   );
 }
 

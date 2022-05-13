@@ -1,0 +1,20 @@
+@import 'styles/colors';
+
+.headline {
+  margin: 0;
+
+  &-h1 {
+    font-size: 24px;
+  }
+
+  &-h6 {
+    font-size: 16px;
+  }
+
+  $greyVariants: ('grey', 'dark-grey', 'light-grey', 'dark');
+  @each $greyVariant in $greyVariants {
+    &-color-#{$greyVariant} {
+      color: color(grey, $greyVariant);
+    }
+  }
+}
