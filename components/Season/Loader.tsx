@@ -6,7 +6,10 @@ import styles from './Loader.module.scss';
 export const Loader: FC = () => {
   return (
     <>
-      <LoadingPlaceholder width="230px" height="16px" />
+      <div className={styles.title}>
+        <LoadingPlaceholder width="230px" height="16px" />
+        <LoadingPlaceholder width="130px" height="16px" />
+      </div>
 
       <div className={styles.rowWrapper}>
         <div className={styles.row}>

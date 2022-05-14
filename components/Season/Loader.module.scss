@@ -13,6 +13,11 @@
   display: flex;
 }
 
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
 .details {
   margin-left: 20px;
   flex: auto;

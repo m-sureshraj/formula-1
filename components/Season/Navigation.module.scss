@@ -1,0 +1,11 @@
+@import 'styles/colors';
+
+.buttonWrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.separator {
+  width: 2px;
+  background-color: color(grey, light-grey);
+}
