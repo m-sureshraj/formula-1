@@ -29,13 +29,13 @@ export const Season: FC<Props> = ({ year }) => {
 
   if (raceResultsQuery.error || seasonChampionQuery.error) {
     // todo: Use alert component
-    return <p>An error has occurred while fetching season data.</p>;
+    return <p>An error occurred while fetching the season data.</p>;
   }
 
   const results = raceResultsQuery.data ?? [];
 
-  // todo: Use alert component
   if (results.length === 0) {
+    // todo: Use alert component
     return <p>Unable to fetch the data</p>;
   }
 
