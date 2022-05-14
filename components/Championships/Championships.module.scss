@@ -12,6 +12,11 @@
   padding-top: 40px;
 }
 
+.headline {
+  display: flex;
+  justify-content: space-between;
+}
+
 .card {
   display: flex;
   flex-direction: column;

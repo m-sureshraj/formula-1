@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
 import { Layout } from '../components/ui/Layout';
+import { SortingProvider } from '../context/sorting.context';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
@@ -22,7 +23,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <SortingProvider>
+          <Component {...pageProps} />
+        </SortingProvider>
+
         {/* Note: following dev tool will be excluded from the production build by react-query */}
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
