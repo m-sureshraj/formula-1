@@ -1,0 +1,72 @@
+@import 'styles/colors';
+
+.results {
+  padding-top: 40px;
+}
+
+.row {
+  border: 1px solid color(brown, base);
+  background-color: color(brown, x-light);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  display: flex;
+}
+
+.round {
+  width: 70px;
+  display: flex;
+  height: 70px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: color(brown, light);
+  border-radius: 8px;
+  font-weight: bold;
+
+  label {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+
+.details {
+  margin-left: 20px;
+  flex: auto;
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+}
+
+.date {
+  margin-left: auto;
+  color: color(grey, 600);
+  font-size: 14px;
+}
+
+.raceWinner {
+  margin-top: 16px;
+  font-size: 16px;
+  color: color(grey, dark-grey);
+  display: flex;
+
+  .winnerName {
+    margin-right: 20px;
+  }
+}
+
+.champion {
+  background-color: color(success, 2x-light);
+  border-color: color(success, 2x-light);
+}
+
+.championLabel {
+  margin-left: auto;
+}

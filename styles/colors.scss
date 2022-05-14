@@ -1,0 +1,66 @@
+// todo: remove unused colors
+$palette: (
+  grey: (
+        0: #FFFFFF,
+        2x-light-grey: #F9F9FB, // 25 (98% of white)
+        x-light-grey: #F4F4F4, // 50 (96% of white)
+        light-grey: #E1E2E3, // 100 (89% of white)
+        200: #BDBDBD, // 200 (74% of white)
+        grey: #949499, // 300 (59% of white)
+        400: #828282, // 400 (51% of white)
+        500: #6F6F6F, // 500 (44% of white)
+        600: #666666,
+        dark-grey: #444444,
+        800: #333333,
+        dark: #222222,
+        black: #000000,
+  ),
+  brown: (
+        base: #C0B3B3,
+        dark: #3E340B,
+        light: #F3ECEC,
+        x-light: #FCF9F9,
+  ),
+  success: (
+        base: #22A121,
+        hover: #26B625,
+        focus: #1D8C1D,
+        light: #78E378,
+        dark: #659F5F,
+        x-light: #D7FDD7,
+        2x-light: #CDECCA,
+  ),
+  primary: (
+        base: #E10600,
+        hover: #E32F2B,
+        focus: #C21D1A,
+        light: #F29E9C,
+        x-light: #FFEBEB,
+  ),
+  warning: (
+        base: #FDA018,
+        hover: #FDAA30,
+        focus: #F89402,
+        light: #FEC97C,
+        x-light: #FFECD1,
+  ),
+  black: (
+        base: #363B3E,
+        hover: #363B3E,
+        focus: #363B3E,
+        light: #363B3E,
+        x-light: #363B3E,
+  ),
+  light-grey: (
+        base: #F4F4F4,
+        hover: #F4F4F4,
+        focus: #F4F4F4,
+        light: #F4F4F4,
+        x-light: #F4F4F4,
+  )
+);
+
+@function color($set, $key) {
+  $color-set: map_get($palette, $set);
+  @return map_get($color-set, $key);
+}

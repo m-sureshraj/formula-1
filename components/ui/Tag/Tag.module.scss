@@ -1,0 +1,24 @@
+@import 'styles/colors';
+
+.tag {
+  border-radius: 10px;
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: color(brown, dark);
+
+  $bgColors: ('warning');
+  @each $bgColor in $bgColors {
+    &-bg-#{$bgColor} {
+      background-color: color($bgColor, x-light);
+    }
+  }
+
+  $bgColors: ('success');
+  @each $bgColor in $bgColors {
+    &-dark-bg-#{$bgColor} {
+      color: #fff;
+      background-color: color($bgColor, dark);
+    }
+  }
+}

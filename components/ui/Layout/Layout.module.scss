@@ -1,0 +1,7 @@
+@import 'styles/variables';
+
+.container {
+  max-width: $containerWidth;
+  margin: 0 auto;
+  padding-top: $headerHeight;
+}
