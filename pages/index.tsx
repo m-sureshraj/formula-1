@@ -10,18 +10,13 @@ interface Props {
 
 const Home: NextPage<Props> = ({ seasons }) => {
   return (
-    <div>
+    <>
       <Head>
         <title>Formula 1</title>
-        <meta
-          name="description"
-          content="Formula 1 championship results from 2005 to now"
-        />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Championships seasons={seasons} />
-    </div>
+    </>
   );
 };
 

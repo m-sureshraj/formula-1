@@ -10,7 +10,11 @@ export async function getRaceResults(year: number): Promise<SeasonResult[]> {
   const url = `${API_ENDPOINT}/${year}/results/1.json`;
   const response = await fetch(url);
 
-  // todo: handle error res.ok
+  if (!response.ok) {
+    console.error(response);
+    throw Error(response.statusText);
+  }
+
   const seasonResults: RaceResultsResponse = await response.json();
 
   return seasonResults.MRData.RaceTable.Races.map(race => {
@@ -38,7 +42,11 @@ export async function getDriverStandings(year: number): Promise<SeasonChampion> 
   const url = `${API_ENDPOINT}/${year}/driverStandings.json`;
   const response = await fetch(url);
 
-  // todo: handle error res.ok
+  if (!response.ok) {
+    console.error(response);
+    throw Error(response.statusText);
+  }
+
   const driverStandings: DriverStandingsResponse = await response.json();
 
   const [standing] = driverStandings.MRData.StandingsTable.StandingsLists;
