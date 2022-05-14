@@ -1,0 +1,28 @@
+@import 'styles/colors';
+
+.button {
+  height: 30px;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid color(grey, 400);
+  cursor: pointer;
+  border-radius: 4px;
+  color: color(grey, dark-grey);
+
+  &-text {
+    border-color: transparent;
+
+    &:hover {
+      color: color(primary, hover);
+    }
+  }
+
+  &:disabled {
+    color: color(grey, 200);
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}

@@ -13,8 +13,8 @@ const Page = () => {
   }
 
   if (!year) {
-    // todo: better design
-    return <p>can not find the season data</p>;
+    // todo: create an alert component
+    return <p>Can not find the season data</p>;
   }
 
   return <Season year={+year} />;

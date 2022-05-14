@@ -1,9 +1,11 @@
-export function getSeasonsList(): number[] {
-  const toYear = new Date().getFullYear();
-  const fromYear = 2004;
-  const duration = toYear - fromYear;
+export const FROM_YEAR = 2004;
 
-  return Array.from({ length: duration }, (_, index) => toYear - index);
+export const TO_YEAR = new Date().getFullYear();
+
+export function getSeasonsList(): number[] {
+  const duration = TO_YEAR - FROM_YEAR;
+
+  return Array.from({ length: duration }, (_, index) => TO_YEAR - index);
 }
 
 export function formatDate(dateString: string): string {
