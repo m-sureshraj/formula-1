@@ -1,0 +1,24 @@
+{
+  "MRData": {
+    "StandingsTable": {
+      "StandingsLists": [
+        {
+          "round": "19",
+          "DriverStandings": [
+            {
+              "points": "256",
+              "wins": "5",
+              "Driver": {
+                "code": "ALO",
+                "url": "http://en.wikipedia.org/wiki/Fernando_Alonso",
+                "givenName": "Fernando",
+                "familyName": "Alonso",
+                "nationality": "Spanish"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

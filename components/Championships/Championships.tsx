@@ -23,15 +23,19 @@ export const Championships: FC<Props> = ({ seasons }) => {
   return (
     <div className={styles.container}>
       <div className={styles.headline}>
-        <Headline>F1 World Champions Result</Headline>
+        <Headline testDataAttr="title">F1 World Champions Result</Headline>
 
-        <select onChange={handleSorting} defaultValue={sortOrder}>
+        <select
+          onChange={handleSorting}
+          defaultValue={sortOrder}
+          data-test="sort-dropdown"
+        >
           <option value={SortOrder.latest}>Latest</option>
           <option value={SortOrder.old}>Old</option>
         </select>
       </div>
 
-      <ul className={styles.cardContainer}>
+      <ul id="championship-list" className={styles.cardContainer}>
         {years.map(year => (
           <li key={year}>
             <Link href={`/season/${year}`}>

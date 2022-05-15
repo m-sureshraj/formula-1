@@ -9,7 +9,7 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/">
-          <a>
+          <a data-test="logo">
             <Image src="/f1-logo.svg" alt="F1 Logo" width={120} height={30} />
           </a>
         </Link>
@@ -21,6 +21,7 @@ export const Header = () => {
                 href="https://github.com/m-sureshraj/formula-1"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-test="application-source"
               >
                 <Github />
               </a>

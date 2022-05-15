@@ -42,9 +42,13 @@ export const Season: FC<Props> = ({ year }) => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <Headline>🚩 &nbsp;&nbsp;Season Winners, {year}</Headline>
+        <Headline testDataAttr="season-title">
+          🚩 &nbsp;&nbsp;Season Winners, {year}
+        </Headline>
+
         <Navigation year={year} />
       </div>
+
       <Result seasonChampion={seasonChampionQuery.data} seasonResults={results} />
     </div>
   );

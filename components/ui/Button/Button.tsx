@@ -10,6 +10,7 @@ interface Props {
   disabled?: boolean;
   children: ReactNode;
   onClick: () => void;
+  dataTestAttr?: string;
 }
 
 const ROOT_CLASS = 'button';
@@ -19,11 +20,17 @@ export const Button: FC<Props> = ({
   disabled = false,
   children,
   onClick,
+  dataTestAttr = '',
 }) => {
   const classes = classNames(styles.button, styles[`${ROOT_CLASS}-${variant}`]);
 
   return (
-    <button className={classes} disabled={disabled} onClick={onClick}>
+    <button
+      data-test={dataTestAttr}
+      className={classes}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

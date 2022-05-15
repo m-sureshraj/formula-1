@@ -19,6 +19,7 @@ export const Result: FC<Props> = ({ seasonResults, seasonChampion }) => {
     <section className={styles.results}>
       {seasonResults.map(result => (
         <div
+          data-test="result"
           key={result.round}
           className={classNames(styles.row, {
             [styles.champion]: championDriverCode === result.winner.driverCode,
@@ -31,20 +32,24 @@ export const Result: FC<Props> = ({ seasonResults, seasonChampion }) => {
 
           <div className={styles.details}>
             <header className={styles.header}>
-              <Headline type="h6">{result.raceName}</Headline>
+              <Headline type="h6" testDataAttr="race-name">
+                {result.raceName}
+              </Headline>
+
               <Tag label={`${result.winner.laps} LAPS`} />
+
               <span className={styles.date}>{formatDate(result.date)}</span>
             </header>
 
             <main className={styles.raceWinner}>
-              <span className={styles.winnerName}>
+              <span className={styles.winnerName} data-test="winner-name">
                 🏆 &nbsp;{result.winner.givenName} {result.winner.familyName}
               </span>
 
               <span>⏰ &nbsp;{result.winner.duration}</span>
 
               {championDriverCode === result.winner.driverCode && (
-                <span className={styles.championLabel}>
+                <span className={styles.championLabel} data-test="champion-label">
                   <Tag label="Season Champion" type={TagType.success} dark />
                 </span>
               )}

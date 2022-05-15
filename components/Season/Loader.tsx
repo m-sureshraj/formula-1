@@ -5,7 +5,7 @@ import styles from './Loader.module.scss';
 
 export const Loader: FC = () => {
   return (
-    <>
+    <div data-test="loader">
       <div className={styles.title}>
         <LoadingPlaceholder width="230px" height="16px" />
         <LoadingPlaceholder width="130px" height="16px" />
@@ -48,6 +48,6 @@ export const Loader: FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
