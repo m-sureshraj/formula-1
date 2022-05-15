@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { LoadingPlaceholder } from '../ui/loading-placeholder';
+import { LoadingPlaceholder } from '../ui/Loading-placeholder';
 import styles from './Loader.module.scss';
 
 export const Loader: FC = () => {
