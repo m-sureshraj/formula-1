@@ -11,11 +11,17 @@ interface Props {
   type?: HeadlineType;
   children: ReactNode;
   color?: HeadlineColor;
+  testDataAttr?: string;
 }
 
 const ROOT_CLASS = 'headline';
 
-export const Headline: FC<Props> = ({ type = 'h1', children, color = 'dark' }) => {
+export const Headline: FC<Props> = ({
+  type = 'h1',
+  children,
+  color = 'dark',
+  testDataAttr = '',
+}) => {
   const Component = type;
   const classes = classNames(
     styles.headline,
@@ -23,5 +29,9 @@ export const Headline: FC<Props> = ({ type = 'h1', children, color = 'dark' }) =
     styles[`${ROOT_CLASS}-color-${color}`]
   );
 
-  return <Component className={classes}>{children}</Component>;
+  return (
+    <Component className={classes} data-test={testDataAttr}>
+      {children}
+    </Component>
+  );
 };

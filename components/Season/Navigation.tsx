@@ -21,14 +21,18 @@ export const Navigation: FC<Props> = ({ year }) => {
   };
 
   return (
-    <div className={styles.buttonWrapper}>
-      <Button disabled={year === FROM_YEAR + 1} onClick={goBack}>
+    <div data-test="navigation" className={styles.buttonWrapper}>
+      <Button
+        dataTestAttr="prev-season"
+        disabled={year === FROM_YEAR + 1}
+        onClick={goBack}
+      >
         ← &nbsp;Previous Season
       </Button>
 
       <span className={styles.separator} />
 
-      <Button disabled={year === TO_YEAR} onClick={goForward}>
+      <Button dataTestAttr="next-season" disabled={year === TO_YEAR} onClick={goForward}>
         Next Season&nbsp; →
       </Button>
     </div>
