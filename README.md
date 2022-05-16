@@ -28,7 +28,7 @@ any dependency incompatibility issues.
 
 ```bash
 > cd </path/to/the/cloned/project>
-> npm ci
+> npm install
 ```
 
 Run the development server:
